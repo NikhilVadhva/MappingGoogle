@@ -1,8 +1,13 @@
 package digdevice.nikhil.com.googlemaptest;
 
+import android.app.Dialog;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -18,6 +23,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 {
     private GoogleMap mMap;
 
+    // Variables to check that the google play service correct version is installed or not
+
+    private static final String TAG="MapsActivity";
+    private static final int ERROR_DIALOG_REQUEST=9001;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -28,6 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+
 
 
     /**
