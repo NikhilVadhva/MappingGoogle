@@ -12,6 +12,37 @@
         android:id="@+id/map"
         tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativer_layout1"
+        android:background="@drawable/white_background"
+        android:elevation="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:id="@+id/magnify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/input_search"
+            android:layout_toRightOf="@+id/magnify"
+            android:textColor="#000"
+            android:imeOptions="actionSearch"
+            android:textSize="18dp"
+            android:background="@null"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_centerVertical="true"
+            android:hint="Enter the Address,City or Zip Code"/>
+    </RelativeLayout>
 
 
 </RelativeLayout>
